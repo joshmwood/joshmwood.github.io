@@ -27,8 +27,21 @@
 }
 
 .header-wrapper {
-    width: 900px;
-    margin: 250px;
+    max-width: 900px;
+    /* margin: 250px; */
+    margin: 12%;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-wrapper {
+        margin: 5%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-wrapper h1 {
+        font-size: 40px;
+    }
 }
 
 .highlight {
