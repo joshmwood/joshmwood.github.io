@@ -4,10 +4,18 @@
     box-sizing: border-box;
 }
 
-.hero-image {
+body {
+    background-color: #EEEEEE;
+    color: #444;
 
+}
+
+p {
+    line-height: 1.6;
+}
+
+.hero-image {
     background-color: #232323;
-    color: white;
     height: 900px;
     display: flex;
     flex-direction: column;
@@ -17,6 +25,7 @@
 }
 
 .hero-image h1 {
+    color: white;
     font-size: 48px;
 }
 
@@ -40,6 +49,10 @@
 
 @media screen and (max-width: 1000px) {
     .header-wrapper h1 {
+        font-size: 40px;
+    }
+
+    .highlight {
         font-size: 40px;
     }
 }
