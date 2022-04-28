@@ -7,7 +7,6 @@
 body {
     background-color: #EEEEEE;
     color: #444;
-
 }
 
 p {
@@ -65,16 +64,20 @@ p {
     margin-top: 45px;
 }
 
+/** Project Section **/
 .projects {
     min-height: 900px;
+    margin-top: 30px;
 }
 
 .projects-heading {
     margin-top: 40px;
     font-size: 36px;
+    text-align: left;
 
 }
 
+/** Project Boxes **/
 .project {
     max-width: 600px;
     margin-bottom: 30px;
@@ -113,6 +116,7 @@ p {
 
 .project p {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .project-image {
@@ -132,22 +136,6 @@ p {
     padding: 4px 10px;
     margin-right: 4px;
 
-}
-
-/** Footer Section **/
-
-.footer {
-    background-color: #232323;
-    color: white;
-    padding: 20px;
-}
-
-.footer-sections {
-    display: flex;
-    align-items: top;
-    justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
 /** Links **/
@@ -179,6 +167,84 @@ a:visited {
 }
 
 
+/** Site Content Wrapper  **/
+.wrapper {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Skills Section */
+
+.skills-heading {
+    text-align: left;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+.header-underline {
+    border-bottom: rgb(87, 111, 245) 8px solid;
+
+}
+
+.skills-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    margin: 20px;
+}
+
+.icon img {
+    height: 80px
+}
+
+
+
+.icon {
+    transition: transform 250ms;
+}
+
+.icon:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 200px;
+}
+
+.contact {
+    width: 500px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Footer Section **/
+
+.footer {
+    background-color: #232323;
+    color: white;
+    padding: 20px;
+}
+
+.footer-sections {
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 /** Copyright Section **/
 .copyright p {
     color: rgb(163, 163, 163);
@@ -202,50 +268,4 @@ a:visited {
 .land h4 {
     font-size: 18px;
     margin-bottom: 15px;
-}
-
-/* Skills Section */
-.skills-list {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon {
-    margin: 20px;
-}
-
-.icon img {
-    height: 80px
-}
-
-.skills-heading {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 36px;
-}
-
-.icon {
-    transition: transform 250ms;
-}
-
-.icon:hover {
-    transform: scale(1.25);
-    opacity: 1;
-}
-
-/* Contact Section */
-.contact-section {
-    min-height: 200px;
-}
-
-.contact {
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
 }
