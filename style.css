@@ -64,15 +64,19 @@
     color: rgb(87, 111, 245);
 }
 
-.github-link a {
+#github-link a {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 12px 0px;
 }
 
-.github-link a {
+#github-link a {
     text-decoration: none;
+}
+
+#github-link a:hover {
+    color: rgb(87, 111, 245);
 }
 
 .github-project-link {
@@ -120,30 +124,53 @@
     margin-bottom: 30px;
 }
 
-.social-links a {
+/** Links **/
+
+.nav-links ul,
+.social-links ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer-subheading {
+    margin-bottom: 8px;
+}
+
+a {
     text-decoration: none;
+    color: rgb(163, 163, 163);
+
 }
 
-.social-links a:visited {
-    color: rgb(204, 204, 204);
+a:visited {
+    color: rgb(163, 163, 163);
 }
 
-.social-links a:hover {
+.social-links a:hover,
+.nav-links a:hover {
     color: rgb(87, 111, 245);
     border-bottom: rgb(87, 111, 245) 1px solid;
 }
 
+
+/** Copyright Section **/
+.copyright p {
+    color: rgb(163, 163, 163);
+}
+
+/** Land Ack Section **/
 .land {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 105px;
-
 }
 
 .land p {
     font-size: 14px;
     margin-bottom: 45px;
+    color: rgb(163, 163, 163);
+
 }
 
 .land h4 {
@@ -178,10 +205,21 @@
 }
 
 .icon {
-    transition: transform 250ms, opacity 400ms;
+    transition: transform 250ms;
 }
 
 .icon:hover {
     transform: scale(1.25);
     opacity: 1;
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 200px;
+}
+
+.contact {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
