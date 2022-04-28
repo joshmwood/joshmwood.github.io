@@ -120,13 +120,21 @@
 }
 
 .land {
-    width: 800px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 105px;
+
 }
 
 .land p {
+    font-size: 14px;
     margin-bottom: 45px;
+}
+
+.land h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 /* Skills Section */
