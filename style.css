@@ -93,6 +93,14 @@ p {
     color: rgb(87, 111, 245);
 }
 
+.links {
+    display: flex;
+}
+
+#github-link {
+    margin-right: 25px;
+}
+
 #github-link a {
     display: flex;
     flex-direction: row;
