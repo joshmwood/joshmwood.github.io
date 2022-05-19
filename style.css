@@ -31,11 +31,28 @@ p {
     padding: 10em 2.5em;
 }
 
+
 .hero--copy {
     color: var(--light-color);
     font-size: 28px;
     font-weight: 300;
     line-height: 1.5;
+}
+
+@media screen and (min-width: 750px) {
+
+    .hero--copy {
+        width: 650px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .hero--copy {
+        width: 650px;
+        font-size: 38px;
+        margin-left: 150px;
+    }
 }
 
 .hero--copy__highlight {
@@ -54,6 +71,14 @@ p {
     margin-top: 30px;
 }
 
+@media screen and (min-width: 750px) {
+    .projects-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .projects-section--heading {
     margin-top: 40px;
     font-size: 36px;
@@ -64,11 +89,16 @@ p {
 /** Project Boxes **/
 .project {
     margin-bottom: 30px;
-    /* border: 1px solid rgb(163, 163, 163);/ */
     padding: 20px;
-    /* box-shadow: 8px 8px rgb(0, 0, 0); */
-
 }
+
+@media screen and (min-width: 750px) {
+    .project {
+        width: 600px;
+
+    }
+}
+
 
 .project--heading {
     font-size: 32px;
@@ -185,6 +215,20 @@ a:visited {
     margin-left: 0.5em;
 }
 
+@media screen and (min-width: 750px) {
+
+    .wrapper {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heading {
+        text-align: left;
+
+    }
+}
+
 .heading__underline {
     border-bottom: var(--accent-color) 8px solid;
 
@@ -257,6 +301,13 @@ img {
     margin-bottom: 30px;
 }
 
+@media screen and (min-width: 750px) {
+    .footer--sections {
+        justify-content: space-around;
+    }
+
+}
+
 .footer--sections>div {
     margin-bottom: 20px;
     margin-right: 35px;
@@ -276,6 +327,13 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
+}
+
+@media screen and (min-width: 750px) {
+    .land {
+        width: 700px;
+    }
+
 }
 
 .land p {
