@@ -1,3 +1,11 @@
+:root {
+    --dark-color: #232323;
+    --accent-color: rgb(87, 111, 245);
+    --light-color: #EEEEEE;
+    --font-color: #444;
+    --font-color-alt: rgb(163, 163, 163);
+}
+
 * {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -5,59 +13,34 @@
 }
 
 body {
-    background-color: #EEEEEE;
-    color: #444;
+    background-color: var(--light-color);
+    color: var(--font-color);
 }
 
 p {
     line-height: 1.6;
 }
 
-.hero-image {
-    background-color: #232323;
-    height: 900px;
+.hero {
+    background-color: var(--dark-color);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
+    width: 100%;
+    padding: 10em 2.5em;
 }
 
-.hero-image h1 {
-    color: white;
-    font-size: 48px;
+.hero--copy {
+    color: var(--light-color);
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
-.projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.header-wrapper {
-    max-width: 900px;
-    /* margin: 250px; */
-    margin: 12%;
-}
-
-@media screen and (max-width: 1200px) {
-    .header-wrapper {
-        margin: 5%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .header-wrapper h1 {
-        font-size: 40px;
-    }
-
-    .highlight {
-        font-size: 40px;
-    }
-}
-
-.highlight {
-    color: rgb(87, 111, 245);
+.hero--copy__highlight {
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
 .bio {
@@ -65,12 +48,13 @@ p {
 }
 
 /** Project Section **/
-.projects {
-    min-height: 900px;
+.projects-list {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
 }
 
-.projects-heading {
+.projects-section--heading {
     margin-top: 40px;
     font-size: 36px;
     text-align: left;
@@ -79,29 +63,45 @@ p {
 
 /** Project Boxes **/
 .project {
-    max-width: 600px;
     margin-bottom: 30px;
     /* border: 1px solid rgb(163, 163, 163);/ */
-    padding: 10px;
+    padding: 20px;
     /* box-shadow: 8px 8px rgb(0, 0, 0); */
 
 }
 
-.project-heading {
+.project--heading {
     font-size: 32px;
     margin: 0;
-    color: rgb(87, 111, 245);
+    color: var(--accent-color);
+    margin-bottom: 0.25em;
 }
 
-.links {
+/** Project Links **/
+
+.project--links {
     display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    margin-bottom: 16px;
 }
 
-#github-link {
-    margin-right: 25px;
+.project--links>div {
+    margin-right: 15px;
 }
 
-#github-link a {
+.project--github a {
+    display: flex;
+    align-items: center;
+}
+
+.project--icon {
+    width: 25px;
+    margin-right: 6px
+}
+
+
+.github-link a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -113,38 +113,44 @@ p {
 }
 
 #github-link a:hover {
-    color: rgb(87, 111, 245);
+    color: var(--accent-color);
 }
 
-.github-project-link {
+
+.project--link-icon {
     width: 30px;
     margin-right: 8px
 }
 
+/** Project Content (Copy & Image) */
 
 .project p {
     margin-bottom: 10px;
     font-size: 18px;
 }
 
-.project-image {
+.project--image {
     max-width: 100%;
 }
 
-.tech-stack {
+/** Projct Stack **/
+.project--stack {
     margin-top: 5px;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.tech-used {
-    border: 2px solid rgb(87, 111, 245);
-    color: rgb(87, 111, 245);
+.project--stack span {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
     font-weight: bold;
     border-radius: 2px;
     padding: 4px 10px;
     margin-right: 4px;
-
+    margin-top: 4px;
 }
+
 
 /** Links **/
 
@@ -154,53 +160,50 @@ p {
     padding: 0px;
 }
 
-.footer-subheading {
-    margin-bottom: 8px;
-}
-
 a {
     text-decoration: none;
-    color: rgb(163, 163, 163);
+    color: var(--font-color-alt);
 
 }
 
 a:visited {
-    color: rgb(163, 163, 163);
+    color: var(--font-color-alt);
 }
 
 .social-links a:hover,
 .nav-links a:hover {
-    color: rgb(87, 111, 245);
-    border-bottom: rgb(87, 111, 245) 1px solid;
+    color: var(--accent-color);
+    border-bottom: var(--accent-color) 1px solid;
 }
 
 
-/** Site Content Wrapper  **/
-.wrapper {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+/** Site Content   **/
+
+.heading {
+    text-align: left;
+    font-size: 36px;
+    margin-left: 0.5em;
 }
+
+.heading__underline {
+    border-bottom: var(--accent-color) 8px solid;
+
+}
+
 
 /* Skills Section */
 
-.skills-heading {
-    text-align: left;
+.skills {
     margin-top: 40px;
-    font-size: 36px;
 }
 
-.header-underline {
-    border-bottom: rgb(87, 111, 245) 8px solid;
-
-}
-
-.skills-list {
+.skills--icon-list {
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -214,7 +217,9 @@ a:visited {
     height: 80px
 }
 
-
+img {
+    max-width: 100%;
+}
 
 .icon {
     transition: transform 250ms;
@@ -222,55 +227,60 @@ a:visited {
 
 .icon:hover {
     transform: scale(1.15);
-    opacity: 1;
 }
 
 /* Contact Section */
-.contact-section {
+
+.contact {
     min-height: 200px;
 }
 
-.contact {
-    width: 500px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+.contact--link {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
 }
 
 /** Footer Section **/
 
 .footer {
-    background-color: #232323;
-    color: white;
+    background-color: var(--dark-color);
+    color: var(--font-color-alt);
     padding: 20px;
+    width: 100%;
 }
 
-.footer-sections {
+.footer--sections {
     display: flex;
-    align-items: top;
-    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-/** Copyright Section **/
-.copyright p {
-    color: rgb(163, 163, 163);
+.footer--sections>div {
+    margin-bottom: 20px;
+    margin-right: 35px;
 }
+
+.footer--subheading {
+    margin-bottom: 8px;
+    color: var(--light-color);
+}
+
+
+/** Copyright Section **/
+
 
 /** Land Ack Section **/
 .land {
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 105px;
+    margin-top: 75px;
 }
 
 .land p {
     font-size: 14px;
     margin-bottom: 45px;
-    color: rgb(163, 163, 163);
-
 }
 
 .land h4 {
