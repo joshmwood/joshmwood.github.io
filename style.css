@@ -125,25 +125,10 @@ p {
     align-items: center;
 }
 
+
 .project--icon {
     width: 25px;
     margin-right: 6px
-}
-
-
-.github-link a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 12px 0px;
-}
-
-#github-link a {
-    text-decoration: none;
-}
-
-#github-link a:hover {
-    color: var(--accent-color);
 }
 
 
@@ -184,26 +169,37 @@ p {
 
 /** Links **/
 
-.nav-links ul,
-.social-links ul {
+.footer--nav-links ul {
     list-style: none;
     padding: 0px;
+    color: var(--font-color-alt);
 }
 
-a {
+.footer--nav-links a {
     text-decoration: none;
     color: var(--font-color-alt);
-
 }
 
-a:visited {
+.footer--nav-links a:visited {
     color: var(--font-color-alt);
 }
 
-.social-links a:hover,
-.nav-links a:hover {
+.footer--nav-links a:hover,
+.footer--nav-links a:focus {
     color: var(--accent-color);
     border-bottom: var(--accent-color) 1px solid;
+}
+
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-color);
+
 }
 
 
@@ -285,6 +281,10 @@ img {
     text-align: center;
 }
 
+.contact--email {
+    color: var(--dark-color);
+}
+
 /** Footer Section **/
 
 .footer {
@@ -318,8 +318,6 @@ img {
     color: var(--light-color);
 }
 
-
-/** Copyright Section **/
 
 
 /** Land Ack Section **/
